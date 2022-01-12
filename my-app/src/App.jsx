@@ -45,10 +45,10 @@ function App() {
               <Header />
             </section>
             <section className='menu'>
-              <h2>Menu</h2>
+              <h2 id="menu">Menu</h2>
               <Menu />
             </section>
-            <button onClick={toggleBooking}>Book a table</button>
+            <button className='new-booking' onClick={toggleBooking}>Book a table</button>
           </div>
           : 
           <div>
