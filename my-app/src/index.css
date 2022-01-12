@@ -68,3 +68,58 @@ h1 {
 .menu {
   color: white;
 }
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap");
+
+.new-bookings {
+  background-color: #2e2d31;
+  color: whitesmoke;
+  padding: 1rem 3rem;
+  margin: auto;
+  transform: translate(0px, 80px);
+  width: fit-content;
+  max-width: 95%;
+}
+
+.new-bookings :last-child {
+  text-align: center;
+  font-weight: 600;
+}
+
+.booking {
+  text-align: center;
+  font-size: 60px;
+  font-weight: 900;
+  font-family: "Lato", sans-serif;
+}
+
+input,
+textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+  font-size: 20px;
+  background-color: white;
+  text-align: end;
+  line-height: 40px;
+}
+
+label {
+  font-size: 20px;
+}
+
+.new-booking button {
+  font: inherit;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  border: 1px solid #af9b5c;
+  background-color: #af9b5c;
+  color: white;
+  margin: 2rem auto;
+  border-radius: 7px;
+}
+
+.new-booking button:hover,
+.new-booking button:active {
+  background-color: #d8bf6c;
+}

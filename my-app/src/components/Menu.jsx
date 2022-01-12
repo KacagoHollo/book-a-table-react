@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Menu = (props) => {
+const Menu = () => {
 
   const pizza = [
     {
@@ -24,7 +24,17 @@ const Menu = (props) => {
       price: "18 $"
     },
   ]
-  return <p>Csá</p>;
+  return (
+      pizza.map((piz, za) => {
+        return (
+          <div key={za}>
+            <h4>{piz.name}</h4>
+            <p>{piz.topping}</p>
+            <h5>{piz.price}</h5>
+          </div>
+        )
+      })
+  )
 }
 
 export default Menu;
