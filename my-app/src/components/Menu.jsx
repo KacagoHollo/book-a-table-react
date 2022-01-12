@@ -27,10 +27,10 @@ const Menu = () => {
   return (
       pizza.map((piz, za) => {
         return (
-          <div key={za}>
-            <h4>{piz.name}</h4>
-            <p>{piz.topping}</p>
-            <h5>{piz.price}</h5>
+          <div className="grid-max"  key={za}>
+            <h4 className='gridecske'>{piz.name}</h4>
+            <p className='gride'>{piz.topping}</p>
+            <h5 className='gridbee'>{piz.price}</h5>
           </div>
         )
       })

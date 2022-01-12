@@ -2,7 +2,7 @@
 import React, {useState} from 'react';
 import Header from './components/Header';
 /* import Booking from './components/Booking'; */
-import BookingPage from './components/BookingPage';
+import BookingForm from './components/BookingPage';
 import Menu from './components/Menu';
 
 function App() {
@@ -10,8 +10,8 @@ function App() {
   const toggleBooking = () => {
     setShowBooking(!showBooking)
   }
-  console.log(props.name)
-  console.log(props.text)
+  
+  // console.log(props.text)
   return (
     <div className="App">
         {/* <img src="https://i.pinimg.com/600x315/a1/21/3c/a1213c822eaaa56a285b7cab977b99da.jpg"/> */}
@@ -41,9 +41,11 @@ function App() {
               <h2>Che Cazzo Fare!</h2>
             </header>
             <section className='introduction'>
+              <h2>About</h2>
               <Header />
             </section>
             <section className='menu'>
+              <h2>Menu</h2>
               <Menu />
             </section>
             <button onClick={toggleBooking}>Book a table</button>
@@ -51,7 +53,7 @@ function App() {
           : 
           <div>
             <section>
-              <BookingPage />
+              <BookingForm />
             </section>
           </div>}
       </div>

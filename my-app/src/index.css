@@ -23,8 +23,10 @@ font-family: "Homemade Apple", cursive;
 */
 
 /* App.css eleje */
+
 body {
   background-color: black;
+  max-width: 100vw;
 }
 
 /* 
@@ -67,6 +69,31 @@ h1 {
 
 .menu {
   color: white;
+  /* left: 50%; */
+  transform: translate(50%, 0);
+}
+
+.grid-max {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 25% 25% 25% 25%;
+}
+
+.gridecske {
+  grid-row: 1;
+  grid-column: 1;
+}
+
+.gride {
+  grid-row: 2;
+  grid-column: 1;
+}
+
+.gridbee {
+  grid-row: 1;
+  grid-column: 2;
+  display: inline;
+  text-align: center;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap");
@@ -122,4 +149,8 @@ label {
 .new-booking button:hover,
 .new-booking button:active {
   background-color: #d8bf6c;
+}
+
+h2 {
+  color: white;
 }
