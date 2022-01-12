@@ -151,8 +151,8 @@ label {
   border-radius: 7px;
 }
 button.new-booking {
-  left: 50%;
-  transform: translate(-50%, 0);
+  left: 50vw;
+  transform: translate(50%, 0);
   font: inherit;
   cursor: pointer;
   padding: 1rem 2rem;
