@@ -7,7 +7,7 @@ const BookingForm = () => {
     const [enteredTime, setEnteredTime] = useState('');
     const [enteredGuest, setEnteredGuest] = useState('');
 
-    // let name = "";
+    let name = "";
     // let email = "";
     // let date = "";
     // let time = "";
@@ -15,6 +15,8 @@ const BookingForm = () => {
 
     const nameChangeHandler = (e) => {
         setEnteredName(e.target.value);
+        name=e.target.value;
+        console.log(name)
     };
     const emailChangeHandler = (e) => {
         setEnteredEmail(e.target.value);
@@ -71,3 +73,18 @@ const BookingForm = () => {
 };
 
 export default BookingForm;
+
+
+// const handleClickEvent = (event) => {
+//    document.getElementById('text').innerHTML = 'You clicekd me'
+// };
+
+//function Button(props) {
+//   const {text, text2} = props;
+//   console.log(text)
+//   console.log(text2)
+
+//  return (
+//      <div>
+//          <button onClick={handleClickEvent}>{props.text}</button>
+//      </div>

@@ -10,6 +10,8 @@ function App() {
   const toggleBooking = () => {
     setShowBooking(!showBooking)
   }
+  console.log(props.name)
+  console.log(props.text)
   return (
     <div className="App">
         {/* <img src="https://i.pinimg.com/600x315/a1/21/3c/a1213c822eaaa56a285b7cab977b99da.jpg"/> */}
