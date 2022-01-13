@@ -22,7 +22,6 @@ const BookingForm = (props) => {
 
     const timeChangeHandler = (e) => {
         setEnteredTime(e.target.value);
-        // format is 15:20
     };
 
     const guestChangeHandler = (e) => {
@@ -33,7 +32,16 @@ const BookingForm = (props) => {
     const today = actualDate.toISOString().split('T')[0];
     const actualHourPlusOne = actualDate.getHours() + 1;
     const actualMinute = actualDate.getMinutes();
-    const minimumTime = actualHourPlusOne < 10 ? ("0" + actualHourPlusOne + ":" + actualMinute) : (actualHourPlusOne + ":" + actualMinute);
+    let minimumTime;
+
+    const availableTimeForTheDay = () => {
+        if (enteredDate === today) {
+            minimumTime = actualHourPlusOne < 10 ? ("0" + actualHourPlusOne + ":" + actualMinute) : (actualHourPlusOne + ":" + actualMinute);
+        } else {
+            minimumTime = "";
+        }
+        return minimumTime;
+    };
 
     const bookingDetails = `
         Booking details
@@ -81,7 +89,7 @@ const BookingForm = (props) => {
             </div>
             <div className='new-booking'>
                 <label>Time of arrival:</label>
-                <input type='time' value={enteredTime} min={minimumTime} onChange={timeChangeHandler} required/>
+                <input type='time' value={enteredTime} min={availableTimeForTheDay()} onChange={timeChangeHandler} required/>
             </div>
             <div className='new-booking'>
                 <label>No. of guests:</label>
