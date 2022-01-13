@@ -64,10 +64,10 @@ const BookingForm = (props) => {
     const submitEvent = (e) => {
         e.preventDefault();
         if (validateEmail()) {
-            console.log("email is good");
+            // console.log("email is good");
             props.toggleBooking(bookingDetails);
         };
-        console.log("email is not good");
+        // console.log("email is not good");
     }
 
   return (

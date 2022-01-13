@@ -39,22 +39,27 @@ function App() {
           <div>
             <header className="App-header">
               <h1>Senior Stateless Pizzeria Compadre Casa Bonita Buffon Pizza Nut</h1>
-              <h2>Che Cazzo Fare!</h2>
+              {/* <h2>Che Cazzo Fare!</h2> */}
             </header>
-            <section className='introduction'>
-              <h2>About</h2>
-              <Header />
-            </section>
-            <section className='menu'>
-              <h2 id="menu">Menu</h2>
-              <Menu />
-            </section>
-            <button className='new-booking' onClick={toggleBooking}>Book a table</button>
+            <div className='content'>
+              <section className='introduction'>
+                <h2>About</h2>
+                <Header />
+              </section>
+              <section className='menu'>
+                <h2 id="menu">Menu</h2>
+                <Menu />
+              </section>
+              <div className='btnDiv'> 
+                <button className='new-booking' onClick={toggleBooking}><b>Book a table</b></button>
+              </div>
+            </div>
           </div>
           : 
           <div>
-            <section>
-            <BookingForm toggleBooking={toggleBooking}/>            </section>
+            <section className="pizza-triangle">
+              <BookingForm toggleBooking={toggleBooking}/>
+            </section>
           </div>}
       </div>
     </div>

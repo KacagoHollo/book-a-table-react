@@ -29,7 +29,9 @@ const Menu = () => {
         return (
           <div className="grid-max"  key={za}>
             <h4 className='gridecske'>{piz.name}</h4>
+            <br></br>
             <p className='gride'>{piz.topping}</p>
+            <br></br>
             <h5 className='gridbee'>{piz.price}</h5>
           </div>
         )
