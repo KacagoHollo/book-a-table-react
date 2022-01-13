@@ -37,7 +37,7 @@ function App() {
       <div>
         {showBooking ? 
           <div>
-            <header className="App-header">
+            <header className="App-header animated-title">
               <h1>Senior Stateless Pizzeria Compadre Casa Bonita Buffon Pizza Nut</h1>
               {/* <h2>Che Cazzo Fare!</h2> */}
             </header>
