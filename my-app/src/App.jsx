@@ -7,8 +7,9 @@ import Menu from './components/Menu';
 
 function App() {
   const [showBooking, setShowBooking] = useState(true)
-  const toggleBooking = () => {
+  const toggleBooking = (text) => {
     setShowBooking(!showBooking)
+    console.log(text);
   }
   
   // console.log(props.text)
@@ -53,8 +54,7 @@ function App() {
           : 
           <div>
             <section>
-              <BookingForm />
-            </section>
+            <BookingForm toggleBooking={toggleBooking}/>            </section>
           </div>}
       </div>
     </div>

@@ -122,7 +122,7 @@ h1 {
   text-align: center;
   font-size: 60px;
   font-weight: 900;
-  font-family: "Lato", sans-serif;
+  font-family: "Cabin Sketch", cursive;
 }
 
 input,
@@ -166,6 +166,9 @@ button.new-booking {
 .new-booking button:hover,
 .new-booking button:active {
   background-color: #d8bf6c;
+}
+.new-booking input {
+  text-align: center;
 }
 
 h2 {
