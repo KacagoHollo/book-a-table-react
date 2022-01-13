@@ -64,10 +64,8 @@ const BookingForm = (props) => {
     const submitEvent = (e) => {
         e.preventDefault();
         if (validateEmail()) {
-            // console.log("email is good");
             props.toggleBooking(bookingDetails);
         };
-        // console.log("email is not good");
     }
 
   return (
@@ -104,18 +102,3 @@ const BookingForm = (props) => {
 };
 
 export default BookingForm;
-
-
-// const handleClickEvent = (event) => {
-//    document.getElementById('text').innerHTML = 'You clicekd me'
-// };
-
-//function Button(props) {
-//   const {text, text2} = props;
-//   console.log(text)
-//   console.log(text2)
-
-//  return (
-//      <div>
-//          <button onClick={handleClickEvent}>{props.text}</button>
-//      </div>
