@@ -6,6 +6,7 @@ const BookingForm = (props) => {
     const [enteredDate, setEnteredDate] = useState('');
     const [enteredTime, setEnteredTime] = useState('');
     const [enteredGuest, setEnteredGuest] = useState('');
+    const [emailError, setEmailError] = useState('');
 
     const nameChangeHandler = (e) => {
         setEnteredName(e.target.value);
@@ -36,16 +37,34 @@ const BookingForm = (props) => {
     // console.log(minimumArrival);
 
     const bookingDetails = `
+        Booking details
         Name: ${enteredName}
+        Email: ${enteredEmail}
+        Date: ${enteredDate}
+        Time: ${enteredTime}
+        No. of guests: ${enteredGuest}
     `;
+
+    const validateEmail = () => {
+        const regex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+        if (!enteredEmail || regex.test(enteredEmail) === false ) {
+            setEmailError("Wrong email format");
+            return false;
+        }
+        return true;
+    };
 
     const submitEvent = (e) => {
         e.preventDefault();
-        props.toggleBooking(bookingDetails);
+        if (validateEmail()) {
+            console.log("email is good");
+            props.toggleBooking(bookingDetails);
+        };
+        console.log("email is not good");
     }
 
   return (
-    <form>
+    <form onSubmit={submitEvent}>
       <div className='new-bookings'>
             <h1 className="booking">Book a Table</h1>
             <div className='new-booking'>
@@ -54,7 +73,8 @@ const BookingForm = (props) => {
             </div>
             <div className='new-booking'>
                 <label>Email:</label>
-                <input type="email" value={enteredEmail} onChange={emailChangeHandler} required />
+                <input type='text' value={enteredEmail} onChange={emailChangeHandler} required />
+                <p>{emailError}</p>
             </div>
             <div className='new-booking'>
                 <label>Date to book for:</label>
@@ -69,7 +89,7 @@ const BookingForm = (props) => {
                 <input type='number' value={enteredGuest} min='1' step='1' onChange={guestChangeHandler} required/>
             </div>
             <div className='new-booking'>
-                <button onClick={submitEvent}>BOOK</button>
+                <button type="submit">BOOK</button>
             </div>
         </div>
     </form>
