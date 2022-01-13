@@ -97,7 +97,7 @@ const BookingForm = (props) => {
             </div>
             <div className='new-booking'>
                 <label>Time of arrival:</label>
-                <input type='text' onChange={timeChangeHandler} pattern="/^(0?[1-9]|1[012]):[0-5][0-9]$/"/>
+                <input type='time' min={dt} onChange={timeChangeHandler} />
             </div>
             <div className='new-booking'>
                 <label>No. of guests:</label>
