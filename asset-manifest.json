@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/book-a-table-react/static/css/main.29cc1630.css",
+    "main.js": "/book-a-table-react/static/js/main.102044d7.js",
+    "static/media/pizza-triangle.jpg": "/book-a-table-react/static/media/pizza-triangle.9fde6b0dc266ad958ab9.jpg",
+    "static/media/pizzaphoto.jpg": "/book-a-table-react/static/media/pizzaphoto.629d8235bcaf68453aac.jpg",
+    "index.html": "/book-a-table-react/index.html",
+    "main.29cc1630.css.map": "/book-a-table-react/static/css/main.29cc1630.css.map",
+    "main.102044d7.js.map": "/book-a-table-react/static/js/main.102044d7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.29cc1630.css",
+    "static/js/main.102044d7.js"
+  ]
+}
